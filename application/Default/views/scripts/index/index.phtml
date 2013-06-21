@@ -8,7 +8,11 @@
     </div>
 </div>
 
-<form action="?" method="post">
-    <input name="business_name" type="text" />
-    <input type="submit" />
-</form>
+<?php
+$this->form->setAction('?');
+$this->form->setMethod('post');
+$this->form->addElement('submit','create',array(
+    'label'=>'Create Website',
+    'class'=>'btn btn-primary'
+));
+echo $this->form;

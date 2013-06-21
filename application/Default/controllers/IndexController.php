@@ -4,22 +4,58 @@ class IndexController extends Zend_Controller_Action
 
     function indexAction()
     {
-        $user = bootstrap::getInstance()->getUser();
-        $this->view->isLoggedIn = $user['id'];
+        $form = new Form;
+        $this->view->form = $form;
 
-        if($this->getRequest()->isPost()) {
+        if($this->getRequest()->isPost() && $form->isValid($this->_getAllParams())) {
             $db = Zend_Registry::get('db');
 
-            $dbname_escaped = 'bookingbat_'.preg_replace('#[^a-zA-Z0-9]#','',$this->_getParam('business_name'));
             try {
-                $db->query(sprintf('CREATE DATABASE `%s`',$dbname_escaped));
+                $id = $this->createDb($db,$form);
+                $this->createConfig($id);
             } catch(Exception $e) {
-                // it must already exist, just try to proceed.
+                throw $e;
             }
-            `mysql --user=root $dbname_escaped < ../application/install.sql`;
+
+            $this->_helper->FlashMessenger->addMessage('Created website');
+            return $this->_redirect('/');
         }
-
-
     }
 
+    function createDb($db,$form)
+    {
+        $db->insert('applications',array(
+            'email'=>$form->getValue('email'),
+            'business_name'=>$form->getValue('business_name'),
+            'owner_name'=>$form->getValue('owner_name'),
+            'created'=>new Zend_Db_Expr('NOW()')
+        ));
+
+        $id = $db->lastInsertId();
+        $dbname = $this->dbName($id);
+        $db->query(sprintf('CREATE DATABASE `%s`',$dbname));
+        `mysql --user=root $dbname < ../application/install.sql`;
+        return $id;
+    }
+
+    function createConfig($id)
+    {
+        $dbName = $this->dbName($id);
+        $config = "
+[production]
+database.adapter = \"mysqli\"
+database.protocol = \"mysql\"
+database.params.host =  localhost
+database.params.dbname = $dbName
+database.params.username = root
+database.params.password =
+";
+
+        file_put_contents('var/website_configs/'.$id,$config);
+    }
+
+    function dbName($id)
+    {
+        return 'bookingbat_'.$id;
+    }
 }
