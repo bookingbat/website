@@ -29,7 +29,6 @@ class IndexController extends Zend_Controller_Action
 
     function confirmationAction()
     {
-        var_dump(sha1('45e7ec3aaf2'));exit;
         $this->view->id = bootstrap::getInstance()->getSession()->id;
         $this->view->password = bootstrap::getInstance()->getSession()->password;
     }
@@ -46,7 +45,9 @@ class IndexController extends Zend_Controller_Action
         $id = $db->lastInsertId();
         $dbname = $this->dbName($id);
         $db->query(sprintf('CREATE DATABASE `%s`',$dbname));
-        `mysql --user=root $dbname < ../application/install.sql`;
+
+        $command = Zend_Registry::get('mysql_command');
+        `$command $dbname < ../application/install.sql`;
         return $id;
     }
 
