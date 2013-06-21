@@ -4,37 +4,8 @@ $user = bootstrap::getInstance()->getUser();
 switch ($user['type']) {
     default:
         ?>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li class="active"><a href="/">Home</a></li>
         <?php
         break;
-    case 'admin':
-        ?>
-        <li><a href="<?= $this->url(
-                array('controller' => 'user', 'action' => 'manage'),
-                'default',
-                true
-            ) ?>">Manage Users</a></li>
-        <?php
-        break;
-    case 'massage-therapist':
-        ?>
-        <li><a href="<?= $this->url(
-                array('controller' => 'user', 'action' => 'register'),
-                'default',
-                true
-            ) ?>">New User</a></li>
-
-        <li><a href="<?= $this->url(
-                array('controller' => 'massage', 'action' => 'appointments'),
-                'default',
-                true
-            ) ?>">My Appointments</a></li>
-        <li><a href="<?= $this->url(
-                array('controller' => 'massage', 'action' => 'availability'),
-                'default',
-                true
-            ) ?>">My Availability</a></li>
-    <?php
 }
 ?>
