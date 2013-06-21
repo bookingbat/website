@@ -60,8 +60,8 @@ database.adapter = \"mysqli\"
 database.protocol = \"mysql\"
 database.params.host =  localhost
 database.params.dbname = $dbName
-database.params.username = root
-database.params.password =
+database.params.username = bookingbat_web
+database.params.password = zlaykl39ds3l3lkksz
 ";
 
         file_put_contents('var/website_configs/'.$id,$config);
