@@ -99,7 +99,7 @@ class bootstrap
 
     function setupSession()
     {
-        $this->session = new Zend_Session_Namespace('famefitness');
+        $this->session = new Zend_Session_Namespace('bookingbat_website');
     }
 
     function getRouter()

@@ -13,13 +13,25 @@ class IndexController extends Zend_Controller_Action
             try {
                 $id = $this->createDb($db,$form);
                 $this->createConfig($id);
+
+                $password = substr(sha1(uniqid()), 1, rand(8,12));
+                $this->setAdminPassword($db,$id,$password);
+
+                bootstrap::getInstance()->getSession()->id = $id;
+                bootstrap::getInstance()->getSession()->password = $password;
+                $this->_helper->FlashMessenger->addMessage('Created Website');
+                return $this->_redirect('/index/confirmation');
             } catch(Exception $e) {
                 throw $e;
             }
-
-            $this->_helper->FlashMessenger->addMessage('Created website');
-            return $this->_redirect('/');
         }
+    }
+
+    function confirmationAction()
+    {
+        var_dump(sha1('45e7ec3aaf2'));exit;
+        $this->view->id = bootstrap::getInstance()->getSession()->id;
+        $this->view->password = bootstrap::getInstance()->getSession()->password;
     }
 
     function createDb($db,$form)
@@ -52,6 +64,13 @@ database.params.password =
 ";
 
         file_put_contents('var/website_configs/'.$id,$config);
+    }
+
+    function setAdminPassword($db,$id,$password)
+    {
+        $db->update($this->dbName($id).'.user',array(
+            'password'=>sha1($password),
+        ), 'username="admin"');
     }
 
     function dbName($id)
