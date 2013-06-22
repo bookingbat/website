@@ -11,13 +11,18 @@ class Form extends Zend_Form
             'label'=>'Business Name',
             'required'=>true
         ));
-        $this->addElement('text','phone',array(
-            'label'=>'Phone',
-            'required'=>true
+        $this->addElement('text', 'email', array(
+            'label' => 'Email Address',
+            'required' => true,
+            'validators' => array('EmailAddress')
         ));
-        $this->addElement('text','email',array(
-            'label'=>'Email',
-            'required'=>true
+        $this->addElement('text', 'phone', array(
+            'label' => 'Phone #',
+            'required' => true,
+            'validators' => array(
+                array('regex', false, array('pattern' => '/^[0-9 -]+$/', 'messages' => array('regexNotMatch' => 'Must not contain characters other than spaces, dashes & digits.'))),
+                array('stringLength', false, array('min' => 10, 'max' => 20))
+            )
         ));
     }
 }
