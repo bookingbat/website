@@ -63,6 +63,14 @@ class bootstrap
                 ))
         );
         $this->router->addRoute(
+            'confirmation',
+            new Zend_Controller_Router_Route('/confirmation/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'confirmation'
+                ))
+        );
+        $this->router->addRoute(
             'features',
             new Zend_Controller_Router_Route('/features/*',
                 array(

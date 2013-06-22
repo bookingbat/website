@@ -25,7 +25,7 @@ class IndexController extends Zend_Controller_Action
                 bootstrap::getInstance()->getSession()->id = $id;
                 bootstrap::getInstance()->getSession()->password = $password;
                 $this->_helper->FlashMessenger->addMessage('Created Website');
-                return $this->_redirect('/index/confirmation');
+                return $this->_redirect('/confirmation');
             } catch(Exception $e) {
                 throw $e;
             }
