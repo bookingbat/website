@@ -1,17 +1,65 @@
-<div class="row-fluid">
-    <div class="span4"></div>
-    <div class="span4 well">
-        <h2>Create Your Website</h2>
-        <?php
-        $this->form->setAction('?');
-        $this->form->setMethod('post');
-        $this->form->addElement('submit','create',array(
-            'label'=>'Create Website',
-            'class'=>'btn btn-primary'
-        ));
-        echo $this->form;
-        ?>
+<style type="text/css">
+    .signup {
+        margin:auto;
+        background: white;
+        font-size:12px;
+        width:500px;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 2px 9px rgba(0,0,0,0.3);
+        -moz-box-shadow: 2px 2px 9px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 9px rgba(0,0,0,0.3);
+    }
+    .signup .zend_form {
+        padding-left:25px;
+    }
+
+    .signup ul {
+        margin-top:25px;
+        list-style: none;
+    }
+
+    .signup li {
+        margin-bottom:10px;
+    }
+
+    .top {
+        width: 500px; height: 50px;
+        background: #2F2E35;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
+    }
+    .top h2 {
+        color: #fff;
+        text-align: center;
+        margin:0;
+        font: 300 30px/50px Helvetica, Verdana, sans-serif;
+    }
+</style>
+
+<div class="signup">
+    <div class="top"><h2>Create Your Website</h2></div>
+    <div class="row-fluid">
+        <div class="span6">
+            <?php
+            $this->form->setAction('?');
+            $this->form->setMethod('post');
+            $this->form->addElement('submit','create',array(
+                'label'=>'Create Website',
+                'class'=>'btn btn-primary'
+            ));
+            echo $this->form;
+            ?>
+        </div>
+        <div class="span6">
+            <ul>
+                <li><i class="icon-ok"></i> 100% Free</li>
+                <li><i class="icon-ok"></i> Take Appointments Online</li>
+                <li><i class="icon-ok"></i> Grow your business</li>
+            </ul>
+        </div>
     </div>
-    <div class="span4"></div>
-</div>
 </div>
