@@ -1,3 +1,16 @@
+body {
+    font-family: "museo-sans",helvetica,arial,sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 27px;
+}
+p {
+    font-size: 13px;
+    margin-bottom:20px;
+}
+.home {
+    padding-left:25px;
+    padding-right:25px;
+}
 .home .row-fluid {
     margin-bottom:15px;
 }
@@ -55,6 +68,7 @@ footer p {
 h1 {
     font-size:17.5px;
     line-height:20px;
+    color:#FF6200;
 }
 h2 {
     font-size:15px;
@@ -76,6 +90,7 @@ h2 {
     -moz-box-shadow: 3px 3px 4px #ccc;
     -webkit-box-shadow: 3px 3px 4px #ccc;
     box-shadow: 3px 3px 4px #ccc;
+    overflow: auto;
 }
 .feature:first-child {
     border-top: 1px solid rgb(212, 212, 212);
@@ -88,4 +103,8 @@ h2 {
 }
 .navbar .trial {
     color:#FF6200 !important;
+}
+.thumbnail-right {
+    float:right;
+    margin-left:40px;
 }
