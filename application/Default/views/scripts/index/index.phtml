@@ -34,20 +34,3 @@
     </div>
 </div>
 
-<div class="row-fluid">
-    <div class="span4"></div>
-    <div class="span4 well">
-        <h2>Create Your Website</h2>
-        <?php
-        $this->form->setAction('?');
-        $this->form->setMethod('post');
-        $this->form->addElement('submit','create',array(
-            'label'=>'Create Website',
-            'class'=>'btn btn-primary'
-        ));
-        echo $this->form;
-        ?>
-    </div>
-    <div class="span4"></div>
-</div>
-</div>

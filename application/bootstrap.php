@@ -70,6 +70,30 @@ class bootstrap
                     'action'=>'features'
                 ))
         );
+        $this->router->addRoute(
+            'pricing',
+            new Zend_Controller_Router_Route('/pricing/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'pricing'
+                ))
+        );
+        $this->router->addRoute(
+            'free-trial',
+            new Zend_Controller_Router_Route('/free-trial/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'trial'
+                ))
+        );
+        $this->router->addRoute(
+            'contact',
+            new Zend_Controller_Router_Route('/contact/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'contact'
+                ))
+        );
     }
 
     function setupViewHelperPaths()

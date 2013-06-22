@@ -83,3 +83,9 @@ h2 {
 .feature:nth-child(odd) {
     background-color: #F5F5F5;
 }
+.navbar {
+    font-family: "HelveticaNeueMedium","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar .trial {
+    color:#FF6200 !important;
+}

@@ -5,31 +5,10 @@
             <div class="nav-collapse collapse">
 
 
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills pull-right">
                     <?=$this->partial('navigation.phtml')?>
                 </ul>
-                <p class="pull-right">
-                    <!--
-                    <?php
-                    $user = bootstrap::getInstance()->getUser();
-                    if ($user) {
-                        ?>
-                        <a class="btn btn-primary" href="<?= $this->url(
-                            array('controller' => 'user', 'action' => 'logout'),
-                            'default',
-                            true
-                        ) ?>">Log
-                            Out</a>
-                    <?php
-                    } else {
-                        ?>
-                        <a class="btn" href="<?= $this->url(array('controller' => 'user', 'action' => 'login'), 'default', true) ?>">Log In</a>
-                        <a class="btn btn-primary" href="<?= $this->url(array('controller' => 'user', 'action' => 'register'), 'default', true) ?>">Register</a>
-                    <?php
-                    }
-                    ?>
-                    -->
-                </p>
+
             </div><!--/.nav-collapse -->
         </div>
     </div>

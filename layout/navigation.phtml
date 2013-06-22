@@ -4,10 +4,10 @@ $user = bootstrap::getInstance()->getUser();
 switch ($user['type']) {
     default:
         ?>
-        <li><a href="<?=$this->url(array(),'home',true)?>">Home</a></li>
         <li><a href="<?=$this->url(array(),'features',true)?>">Tour &amp; Features</a></li>
-        <li><a href="/">Pricing</a></li>
-        <li><a href="/">Contact Us</a></li>
+        <li><a href="<?=$this->url(array(),'pricing',true)?>">Pricing</a></li>
+        <li><a class="trial" href="<?=$this->url(array(),'free-trial',true)?>">Free Trial</a></li>
+        <li><a href="<?=$this->url(array(),'contact',true)?>">Contact Us</a></li>
         <?php
         break;
 }

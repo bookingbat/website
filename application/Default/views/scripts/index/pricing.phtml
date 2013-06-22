@@ -1,0 +1,159 @@
+<a id="free-trial-button" class="btn btn-primary" href="<?=$this->url(array(),'free-trial',true)?>">Try Booking Bat Free</a>
+<style type="text/css">
+    #free-trial-button {
+        margin:auto;
+        display: block;
+        width:150px;
+    }
+
+    #container {
+        width: 780px;
+        margin:auto;
+        margin-top: 100px;
+        height:600px;
+    }
+
+        /*Top Bar*/
+    .top {
+        width: 250px; height: 50px;
+        background: #2F2E35;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .top h2 {
+        color: #fff;
+        text-align: center;
+        margin:0;
+        font: 300 30px/50px Helvetica, Verdana, sans-serif;
+    }
+
+        /*Shape*/
+    .pricingtable {
+        width: 250px; height: 350px;
+        background: white;
+        margin: 5px;
+        float: left;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 2px 9px rgba(0,0,0,0.3);
+        -moz-box-shadow: 2px 2px 9px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 9px rgba(0,0,0,0.3);
+    }
+
+        /*Features*/
+    .pricingtable ul {
+        list-style-type: none;
+        font: 300 18px/2 Helvetica, Verdana, sans-serif;
+        margin: 20px 0 0 30px;
+    }
+
+    .pricingtable ul strong {
+        font-weight: bold;
+    }
+
+        /*Dividing Line*/
+    .pricingtable hr {
+        border: 0;
+        background-color: #BCBEC0;
+        color: #BCBEC0;
+        height: 1px;
+        width: 190px;
+        margin: 20px 0 0 30px;
+    }
+
+        /*Price*/
+    .pricingtable h1 {
+        text-align: center;
+        font: bold 88px/1 Helvetica, Verdana, sans-serif;
+        margin: 20px 0 0 0;
+    }
+
+    .pricingtable h1 sup {
+        font-size: 45px;
+    }
+
+    .pricingtable p {
+        text-align: center;
+        font: 500 14px/1 Helvetica, Verdana, sans-serif;
+        color: #BCBEC0;
+    }
+
+        /*Button*/
+    .pricingtable a {
+        display: block;
+        width: 150px;
+        height:40px;
+        line-height: 40px;
+        margin: auto;
+        text-transform: uppercase;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+        /*Scaled Version*/
+    .featured {
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+    }
+</style>
+
+<div id="container">
+    <div class="pricingtable">
+        <div class="top">
+            <h2>Basic</h2>
+        </div>
+        <ul>
+            <li><strong>1</strong> Staff Login</li>
+            <li><strong>100</strong> Appointments</li>
+        </ul>
+
+        <hr />
+
+        <h1><sup>Free</sup></h1>
+        <p>Per Month</p>
+
+        <a class="btn btn-success" href="#">Sign Up</a>
+    </div>
+
+    <div class="pricingtable featured">
+        <div class="top">
+            <h2>Pro</h2>
+        </div>
+        <ul>
+            <li><strong>5</strong> Staff Logins</li>
+            <li><strong>Unlimited</strong> Appointments</li>
+        </ul>
+
+        <hr />
+
+        <h1><sup>$</sup>25</h1>
+        <p>per month</p>
+
+        <a class="btn btn-success" href="#">Sign Up</a>
+    </div>
+
+    <div class="pricingtable">
+        <div class="top">
+            <h2>Enterprise</h2>
+        </div>
+        <ul>
+            <li><strong>Unlimited</strong> Staff Logins</li>
+            <li><strong>Unlimited</strong> Appointments</li>
+        </ul>
+
+        <hr />
+
+        <h1><sup>$</sup>45</h1>
+        <p>per month</p>
+
+        <a class="btn btn-success" href="#">Sign Up</a>
+    </div>
+
+</div>

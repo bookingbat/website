@@ -2,12 +2,12 @@
 class IndexController extends Zend_Controller_Action
 {
 
-    function featuresAction()
-    {
+    function indexAction() {}
+    function featuresAction() {}
+    function pricingAction() {}
+    function contactAction() {}
 
-    }
-
-    function indexAction()
+    function trialAction()
     {
         $form = new Form;
         $this->view->form = $form;
