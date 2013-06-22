@@ -14,8 +14,9 @@
 .hero-unit h1 {
     font-size:30px;
 }
-.container {
-    position:fixed;
+.container-fluid {
+    width:100%;
+    padding:0;
 }
 .nav-collapse, .nav-collapse.collapse {
     height: auto;
@@ -41,6 +42,7 @@ footer {
     background-color:#FAFAFA;
     padding:10px;
     border: 1px solid rgb(212, 212, 212);
+    margin-top:10px;
 }
 footer p {
     color:#ccc;
@@ -67,4 +69,17 @@ h2 {
 }
 .right {
     text-align: right;
+}
+.feature {
+    border-bottom: 1px solid rgb(212, 212, 212);
+    padding:30px;
+    -moz-box-shadow: 3px 3px 4px #ccc;
+    -webkit-box-shadow: 3px 3px 4px #ccc;
+    box-shadow: 3px 3px 4px #ccc;
+}
+.feature:first-child {
+    border-top: 1px solid rgb(212, 212, 212);
+}
+.feature:nth-child(odd) {
+    background-color: #F5F5F5;
 }

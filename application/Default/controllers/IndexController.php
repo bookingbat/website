@@ -2,6 +2,11 @@
 class IndexController extends Zend_Controller_Action
 {
 
+    function featuresAction()
+    {
+
+    }
+
     function indexAction()
     {
         $form = new Form;

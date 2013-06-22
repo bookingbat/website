@@ -55,11 +55,19 @@ class bootstrap
     {
 
         $this->router->addRoute(
-            'massage-calendar',
-            new Zend_Controller_Router_Route('calendar/*',
+            'home',
+            new Zend_Controller_Router_Route('/*',
                 array(
-                    'controller' => 'staffcalendar',
+                    'controller' => 'index',
                     'action'=>'index'
+                ))
+        );
+        $this->router->addRoute(
+            'features',
+            new Zend_Controller_Router_Route('/features/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'features'
                 ))
         );
     }
