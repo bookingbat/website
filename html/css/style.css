@@ -104,6 +104,10 @@ h2 {
 .navbar .trial {
     color:#FF6200 !important;
 }
+.thumbnail-left {
+    float:left;
+    margin-right:40px;
+}
 .thumbnail-right {
     float:right;
     margin-left:40px;
