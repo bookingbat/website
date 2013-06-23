@@ -3,6 +3,9 @@ body {
     letter-spacing: 0.1em;
     line-height: 27px;
 }
+.hero-unit p {
+    font-size:18px;
+}
 p {
     font-size: 13px;
     margin-bottom:20px;
@@ -19,13 +22,6 @@ p {
 }
 .error {
     color: red;
-}
-.hero-unit {
-    margin:0;
-    padding:10px;
-}
-.hero-unit h1 {
-    font-size:30px;
 }
 .container-fluid {
     width:100%;
