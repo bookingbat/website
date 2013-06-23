@@ -31,7 +31,7 @@
 
         /*Shape*/
     .pricingtable {
-        width: 250px; height: 350px;
+        width: 250px; height: 375px;
         background: white;
         margin: 5px;
         float: left;
@@ -107,45 +107,29 @@
 <div id="container">
     <div class="pricingtable">
         <div class="top">
-            <h2>Free</h2>
+            <h2>Free Trial</h2>
         </div>
         <ul>
-            <li><strong>1</strong> Staff Login</li>
-            <li><strong>1</strong> Service</li>
-            <li><strong>100</strong> Appointments</li>
+            <li>Hosted On Our Server</li>
+            <li><strong>Unlimited</strong> Staff Login</li>
+            <li><strong>Unlimited</strong> Services</li>
+            <li><strong>Unlimited</strong> Appointments</li>
         </ul>
 
         <hr />
 
         <h1><sup>Free</sup></h1>
-        <p>Per Month</p>
+        <p>30 Day Free Trial</p>
 
-        <a class="btn btn-success" href="#">Sign Up</a>
+        <a class="btn btn-success" href="<?=$this->url(array(),'free-trial',true)?>">Sign Up</a>
     </div>
 
     <div class="pricingtable featured">
         <div class="top">
-            <h2>Basic</h2>
+            <h2>Hosted</h2>
         </div>
         <ul>
-            <li><strong>5</strong> Staff Logins</li>
-            <li><strong>5</strong> Services</li>
-            <li><strong>1,000</strong> Appointments</li>
-        </ul>
-
-        <hr />
-
-        <h1><sup>$</sup>25</h1>
-        <p>per month</p>
-
-        <a class="btn btn-success" href="#">Sign Up</a>
-    </div>
-
-    <div class="pricingtable">
-        <div class="top">
-            <h2>Pro</h2>
-        </div>
-        <ul>
+            <li>Hosted On Our Server</li>
             <li><strong>Unlimited</strong> Staff Logins</li>
             <li><strong>Unlimited</strong> Services</li>
             <li><strong>Unlimited</strong> Appointments</li>
@@ -153,10 +137,29 @@
 
         <hr />
 
-        <h1><sup>$</sup>45</h1>
+        <h1><sup>$</sup>25</h1>
         <p>per month</p>
 
-        <a class="btn btn-success" href="#">Sign Up</a>
+        <a class="btn btn-success" href="<?=$this->url(array(),'signup',true)?>">Sign Up</a>
+    </div>
+
+    <div class="pricingtable">
+        <div class="top">
+            <h2>Open Source</h2>
+        </div>
+        <ul>
+            <li>Hosted On Your Server</li>
+            <li><strong>Unlimited</strong> Staff Logins</li>
+            <li><strong>Unlimited</strong> Services</li>
+            <li><strong>Unlimited</strong> Appointments</li>
+        </ul>
+
+        <hr />
+
+        <h1><sup>Free</sup></h1>
+        <p>Open Source</p>
+
+        <a class="btn btn-success" href="#">Download</a>
     </div>
 
 </div>

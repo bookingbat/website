@@ -102,6 +102,14 @@ class bootstrap
                     'action'=>'contact'
                 ))
         );
+        $this->router->addRoute(
+            'signup',
+            new Zend_Controller_Router_Route('/signup/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'signup'
+                ))
+        );
     }
 
     function setupViewHelperPaths()

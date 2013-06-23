@@ -6,6 +6,7 @@ class IndexController extends Zend_Controller_Action
     function featuresAction() {}
     function pricingAction() {}
     function contactAction() {}
+    function signupAction() {}
 
     function trialAction()
     {
