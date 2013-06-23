@@ -67,7 +67,7 @@ database.protocol = \"mysql\"
 database.params.host =  localhost
 database.params.dbname = $dbName
 database.params.username = bookingbat_web
-database.params.password = zlaykl39ds3l3lkksz
+database.params.password = f00b@r1337
 ";
 
         file_put_contents('var/website_configs/'.$id,$config);
