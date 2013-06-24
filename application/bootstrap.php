@@ -110,6 +110,14 @@ class bootstrap
                     'action'=>'signup'
                 ))
         );
+        $this->router->addRoute(
+            'user-guide',
+            new Zend_Controller_Router_Route('/user-guide/*',
+                array(
+                    'controller' => 'index',
+                    'action'=>'userguide'
+                ))
+        );
     }
 
     function setupViewHelperPaths()
