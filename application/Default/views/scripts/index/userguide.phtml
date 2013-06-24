@@ -7,104 +7,46 @@
     }
 </style>
 <div class="padded">
-<ul>
-    <li><a href="#signup">Signup for cloud instance/free trial</a></li>
-    <li>Admin
-        <ul>
-            <li>Logging In</li>
-            <li>Manage Services</li>
-            <li>Manage Staff</li>
-            <li>Set Availability</li>
-            <li>Assign Services</li>
-            <li>Appointments</li>
-        </ul>
-    </li>
-    <li>Appointments</li>
-        <ul>
-            <li>Booking Appointments</li>
-            <li>Selecting A Service</li>
-            <li>Selecting A Date</li>
-            <li>Select Appointment Duration</li>
-            <li>Select Appointment Start Time</li>
-            <li>Select Staff</li>
-            <li>Submit Your Contact Information</li>
-            <li>Confirmation</li>
-        </ul>
-    </li>
-    <li>Staff
-        <ul>
-            <li>My Appointments</li>
-            <li>My Availability</li>
-        </ul>
-    </li>
-</ul>
+    <div class="row-fluid">
+        <div class="span4">
+            <ul class="well affix">
+                <li><a href="<?=$this->url(array('page'=>'create-website'))?>">Create Your Website</a></li>
+                <li>Admin
+                    <ul>
+                        <li><a href="<?=$this->url(array('page'=>'logging-in'))?>">Logging In</a></li>
+                        <li><a href="<?=$this->url(array('page'=>'manage-services'))?>">Manage Services</a></li>
+                        <li><a href="<?=$this->url(array('page'=>'manage-staff'))?>">Manage Staff</a></li>
+                        <li><a href="<?=$this->url(array('page'=>'manage-availability'))?>">Set Availability</a></li>
+                        <li><a href="<?=$this->url(array('page'=>'assign-services'))?>">Assign Services</a></li>
+                        <li><a href="<?=$this->url(array('page'=>'appointments'))?>">Appointments</a></li>
+                    </ul>
+                </li>
+                <li>Appointments</li>
+                <ul>
+                    <li><a href="<?=$this->url(array('page'=>'select-service'))?>">Selecting A Service</a></li>
+                    <li><a href="<?=$this->url(array('page'=>'select-date'))?>">Selecting A Date</a></li>
+                    <li><a href="<?=$this->url(array('page'=>'select-duration'))?>">Select Appointment Duration</a></li>
+                    <li><a href="<?=$this->url(array('page'=>'select-start'))?>">Select Appointment Start Time</a></li>
+                    <li><a href="<?=$this->url(array('page'=>'select-staff'))?>">Select Staff</a></li>
+                    <li><a href="<?=$this->url(array('page'=>'submit-contact-info'))?>">Submit Your Contact Information</a></li>
+                    <li><a href="<?=$this->url(array('page'=>'confirmation'))?>">Confirmation</a></li>
+                </ul>
+                </li>
+                <li>Staff
+                    <ul>
+                        <li><a href="<?=$this->url(array('page'=>'my-appointments'))?>">My Appointments</a></li>
+                        <li><a href="<?=$this->url(array('page'=>'my-availability'))?>">My Availability</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="span8">
+            <?php
+            if($this->page) {
+                echo $this->partial("user-guide/$this->page.phtml");
+            }
+            ?>
+        </div>
+    </div>
 
-<hr />
-<a name="signup"></a>
-<h1>Signup for cloud instance/free trial</h1>
-<img src="/img/user-guide/2.png" />
-<img src="/img/user-guide/3.png" />
-
-<hr />
-<a name="admin"></a>
-<h1>Admin</h1>
-
-<h2>Logging In</h2>
-<img src="/img/user-guide/4.png" />
-<img src="/img/user-guide/5.png" />
-<img src="/img/user-guide/6.png" />
-
-    <h2>Manage Users</h2>
-    <img src="/img/user-guide/7.png" />
-    <img src="/img/user-guide/8.png" />
-    <img src="/img/user-guide/9.png" />
-    <img src="/img/user-guide/10.png" />
-
-    <h2>Manage Availability</h2>
-    <img src="/img/user-guide/11.png" />
-    <img src="/img/user-guide/12.png" />
-    <img src="/img/user-guide/13.png" />
-    <img src="/img/user-guide/14.png" />
-
-    <h2>Manage Services</h2>
-    <img src="/img/user-guide/15.png" />
-    <img src="/img/user-guide/16.png" />
-    <img src="/img/user-guide/17.png" />
-    <img src="/img/user-guide/18.png" />
-    <img src="/img/user-guide/19.png" />
-
-    <h2>Assign Services</h2>
-    <img src="/img/user-guide/20.png" />
-    <img src="/img/user-guide/21.png" />
-    <img src="/img/user-guide/22.png" />
-
-    <h2>Appointments</h2>
-    <img src="/img/user-guide/31.png" />
-
-    <h2>Make A Booking</h2>
-    <h3>Pick Service</h3>
-    <img src="/img/user-guide/23.png" />
-    <h3>Pick Date</h3>
-    <img src="/img/user-guide/24.png" />
-    <h3>Pick Duration</h3>
-    <img src="/img/user-guide/25.png" />
-    <h3>Pick Start Time</h3>
-    <img src="/img/user-guide/26.png" />
-    <h3>Pick Staff</h3>
-    <img src="/img/user-guide/27.png" />
-    <h3>Submit Your Contact Information</h3>
-    <img src="/img/user-guide/28.png" />
-    <img src="/img/user-guide/29.png" />
-    <h3>Confirmation</h3>
-    <img src="/img/user-guide/30.png" />
-
-    <h1>Staff</h1>
-
-
-    <img src="/img/user-guide/32.png" />
-    <h2>My Appointments</h2>
-    <img src="/img/user-guide/33.png" />
-
-    <h2>My Availability</h2>
-    <img src="/img/user-guide/34.png" />
 </div>

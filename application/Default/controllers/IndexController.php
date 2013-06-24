@@ -7,7 +7,10 @@ class IndexController extends Zend_Controller_Action
     function pricingAction() {}
     function contactAction() {}
     function signupAction() {}
-    function userguideAction() {}
+    function userguideAction()
+    {
+        $this->view->page = $this->getParam('page');
+    }
 
     function trialAction()
     {
