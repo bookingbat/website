@@ -5,6 +5,10 @@
         border:1px #000 solid;
         border-radius:10px;
     }
+    .hero-unit
+    {
+        margin-bottom:200px;
+    }
 </style>
 <div class="padded">
     <div class="row-fluid">
@@ -45,6 +49,13 @@
             <?php
             if($this->page) {
                 echo $this->partial("user-guide/$this->page.phtml");
+            } else {
+                ?>
+                <div class="hero-unit">
+                    <h1>User Guide</h1>
+                    <p>How to create a Booking Bat website, set everything up &amp; book appointments</p>
+                </div>
+                <?php
             }
             ?>
         </div>
