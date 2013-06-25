@@ -1,8 +1,16 @@
-body {
+body > .container-fluid {
     font-family: "museo-sans",helvetica,arial,sans-serif;
     letter-spacing: 0.1em;
     line-height: 27px;
-    margin-top:60px;
+}
+body {
+    padding-top:60px;
+}
+@media (max-width: 979px) {
+    /* Remove any padding from the body */
+    body {
+        padding-top: 0;
+    }
 }
 .hero-unit p {
     font-size:18px;
@@ -24,7 +32,7 @@ p {
 .error {
     color: red;
 }
-.container-fluid {
+body > .container-fluid {
     width:100%;
     padding:0;
 }
@@ -49,9 +57,12 @@ ul.errors li {
     vertical-align: baseline;
 }
 footer {
-    background-color:#FAFAFA;
+    background-color:#3B3C3A;
+    color:white;
     padding:10px;
-    border: 1px solid rgb(212, 212, 212);
+    border-top: 5px black solid;
+    border-left:0;
+    border-right:0;
     margin-top:10px;
 }
 footer p {
