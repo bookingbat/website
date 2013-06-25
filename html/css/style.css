@@ -29,6 +29,11 @@ p {
 .sales-pitch h2 {
     display:inline;
 }
+.sales-pitch a.btn {
+    display: block;
+    margin-top:5px;
+    margin-bottom:5px;
+}
 .error {
     color: red;
 }
