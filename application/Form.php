@@ -11,6 +11,9 @@ class Form extends Zend_Form
             'label'=>'Business Name',
             'required'=>true
         ));
+        $this->addElement('text','website',array(
+            'label'=>'Website (optional)',
+        ));
         $this->addElement('text', 'email', array(
             'label' => 'Email Address',
             'required' => true,

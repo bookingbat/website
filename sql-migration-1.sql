@@ -1,0 +1,1 @@
+ALTER TABLE `applications` ADD `website` VARCHAR( 255 ) NOT NULL ;

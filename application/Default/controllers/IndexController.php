@@ -47,8 +47,10 @@ class IndexController extends Zend_Controller_Action
     {
         $db->insert('applications',array(
             'email'=>$form->getValue('email'),
+            'website'=>$form->getValue('website'),
             'business_name'=>$form->getValue('business_name'),
             'owner_name'=>$form->getValue('owner_name'),
+            'phone'=>$form->getValue('phone'),
             'created'=>new Zend_Db_Expr('NOW()')
         ));
 
