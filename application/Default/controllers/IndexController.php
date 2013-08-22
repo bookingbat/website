@@ -81,8 +81,10 @@ database.params.password = f00b@r1337
 
     function setAdminPassword($db,$id,$password)
     {
-        $db->update($this->dbName($id).'.user',array(
+        $db->insert($this->dbName($id).'.user',array(
+            'username'=>'admin',
             'password'=>sha1($password),
+            'type'=>'admin',
         ), 'username="admin"');
     }
 
